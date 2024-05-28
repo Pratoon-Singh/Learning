@@ -4,7 +4,7 @@ public class RecursiveFibo {
 
     public static void main(String[] args) {
 //        System.out.println(fibonacci(9));
-        int n = 9;
+        int n = 10;
         for (int i = 0; i < n; i++) {
             System.out.print(fibonacci(i) + " ");
         }
