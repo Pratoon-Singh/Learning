@@ -18,7 +18,7 @@ public class PersonJdbcDao {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    class PersonRow implements RowMapper{
+    static class PersonRow implements RowMapper<Person>{
 
         @Override
         public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -36,21 +36,21 @@ public class PersonJdbcDao {
 
     public Person findById(int id) {
         return jdbcTemplate.queryForObject("Select * from Person where id = ?",
-                new Object[]{id}, new BeanPropertyRowMapper<Person>(Person.class));
+                new BeanPropertyRowMapper<>(Person.class),id);
     }
 
     public int deleteById(int id) {
-        return jdbcTemplate.update("delete from Person where id = ?", new Object[]{id});
+        return jdbcTemplate.update("delete from Person where id = ?", id);
     }
 
     public int insert(Person person) {
-        return jdbcTemplate.update("insert into Person (id, name ,location ) values(?,?,?);",new Object[]
-                {person.getId(),person.getName(),person.getLocation()});
+        return jdbcTemplate.update("insert into Person (id, name ,location ) values(?,?,?);",
+                person.getId(),person.getName(),person.getLocation());
     }
 
     public int update(Person person) {
         return jdbcTemplate.update("update Person set name = ? , location = ? where id = ?",
-                new Object[]{person.getName(),person.getLocation(),person.getId()});
+                person.getName(),person.getLocation(),person.getId());
     }
 
 
