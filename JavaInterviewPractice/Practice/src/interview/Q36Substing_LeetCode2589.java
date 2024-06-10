@@ -2,10 +2,10 @@ package interview;
 
 public class Q36Substing_LeetCode2589 {
     public static void main(String[] args) {
-//        String s = "z";
-//        String t = "abcde";
-        String s = "lbg";
-        String t = "g";
+        String s = "z";
+        String t = "abcde";
+//        String s = "lbg";
+//        String t = "g";
         System.out.println(appendCharacters(s, t));
     }
 
