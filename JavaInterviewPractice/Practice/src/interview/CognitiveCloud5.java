@@ -6,7 +6,7 @@ import java.util.Map;
 public class CognitiveCloud5 {
     // Find the highest frequent character in a string using Hashmap
     public static void main(String[] args) {
-        String word = "strawberry";
+        String word = "strawberryyy";
         Map<Character, Integer> counts = new HashMap<>();
         for (char c : word.toCharArray()){
             counts.put(c,counts.getOrDefault(c,0)+1);

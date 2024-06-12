@@ -14,7 +14,9 @@ public class CognitiveCloud7 {
        for(Map.Entry<Character, Integer> entry: charCounts.entrySet()){
            if(entry.getValue()==1){
                System.out.println(entry.getKey()+" ");
+               break;
            }
+
        }
     }
 }

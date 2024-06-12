@@ -21,6 +21,6 @@ public class Q41FindConsecutive {
             left++;
             right++;
         }
-        System.out.println(arrayList);
+//        System.out.println(arrayList);
     }
 }
