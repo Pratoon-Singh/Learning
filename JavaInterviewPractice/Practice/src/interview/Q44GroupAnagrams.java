@@ -2,7 +2,7 @@ package interview;
 
 import java.util.*;
 
-public class Q44GroupAnagrams {
+public class  Q44GroupAnagrams {
     /*
     There are list of strings which are of same length, print all strings which have same characters.
     [abc, bca, def, fed]
